@@ -23,7 +23,7 @@ def main(config):
 
     grams = get_grams(item, unit, quantity, MASSES, VOLUMES, DENSITIES)
 
-    st.title(f"{grams:.2f}")
+    st.title(f"{grams:.2f} g")
 
     return {"item": item, "unit": unit, "quantity": quantity}
 

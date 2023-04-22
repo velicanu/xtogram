@@ -3,11 +3,13 @@ import os
 
 import streamlit as st
 
+DEFAULT_CONFIG = {"item": "sugar", "unit": "mL", "quantity": 1.0}
+
 
 def load_config():
     if os.path.exists("config.json"):
         return json.load(open("config.json"))
-    return {"item": "sugar", "unit": "mL", "quantity": 1.0}
+    return DEFAULT_CONFIG
 
 
 def save_config(config):
